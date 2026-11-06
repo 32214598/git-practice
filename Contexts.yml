@@ -1,4 +1,4 @@
-name: Contdexts # workflow id
+name: Contexts # workflow id
   on: push # event trigger
   jobs: #job
     print: #job id, runner id name, 사용자 임의 정의 가능 
