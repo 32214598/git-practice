@@ -1,0 +1,11 @@
+name: Object Filter Example
+on: workflow_dispatch
+env: 
+  FRUITS: '{"fruits":[{"name":"Apple","price":1000},{"name":"Banana","price":2000}]}'
+jobs:
+  object-filter:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Object Filter Test
+        env:
+          FIRST: ${{}}
