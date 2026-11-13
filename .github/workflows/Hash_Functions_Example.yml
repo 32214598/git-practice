@@ -1,0 +1,12 @@
+name: Hash Functions Example
+on: workflow_dispatch
+jobs:
+  hash-functions:
+    runs-on: ubuntu-latest
+    steps:       
+      - uses: actions/checkous@v5
+      - name: GitHub File Hash
+        env:
+          RESULT_YAML: "${{ hashfiles('.github/workflows/*.yaml')  }}"
+        run: printenv | grep '^RESULT_'
+
