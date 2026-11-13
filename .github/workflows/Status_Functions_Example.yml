@@ -1,0 +1,11 @@
+name: STatus Functions Example
+on: workflow_dispatch
+jobs: 
+  status-test:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Normal Step
+        run: echo "Normal execution"
+
+      - name: Success Test
+        if: 
