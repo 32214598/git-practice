@@ -8,4 +8,4 @@ jobs:
     steps:
       - name: Object Filter Test
         env:
-          FIRST: ${{}}
+          FIRST: ${{"fruits":[{"name":"Apple","price":1000},{"name":"Cherry","price}}
