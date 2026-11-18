@@ -1,0 +1,17 @@
+name: Variable Example
+on: workflow_dispatch
+jobs:
+  variable-test:
+    runs-on: ubuntu-latest
+
+    env:
+      MESSAGE: Hello GitHub
+
+    steps:
+      - name: Normal ENV
+        run: echo "E`
+
+    steps:
+      - name: Read VAriables
+        env:
+          OUTPUT_VALUE
