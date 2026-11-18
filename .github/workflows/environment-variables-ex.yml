@@ -1,7 +1,7 @@
-name: Envrionment Variables Demo
+name: Environment Variables Demo
 on: workflow_dispatch
 env:
-  APP_MAME: MyApplication
+  APP_NAME: MyApplication
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -21,19 +21,20 @@ jobs:
           echo "Application: $APP_NAME"
           echo "Version: $APP_VERSION"
           echo "Message: $MESSAGE"
-      - name: Emv Overwrite
+      - name: Env Overwrite
         env:
           APP_NAME: MyApplication v2 
         run: |
           echo "Application: $APP_NAME"
       - name: Default Envs
         run: echo "$GITHUB_REPOSITORY"
-   print:
+  print:
      runs-on: ubuntu-latest
      steps:
        - run: |
-         echo "Application: $APP_NAME"
-         echo "Version: $APP_VERSION"
-         echo "Message: $MESSAGE"
+           echo "Application: $APP_NAME"
+           echo "Version: $APP_VERSION"
+           echo "Message: $MESSAGE"
+         
          
 
