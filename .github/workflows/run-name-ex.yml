@@ -1,4 +1,4 @@
-name: Run NAme Example
+name: Run Name Example
 run-name: "Run #${{ github.run_number }} by ${{ github.actor }} on ${{ github.ref_name }}"
 on: workflow_dispatch
 jobs:
