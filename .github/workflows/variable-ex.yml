@@ -9,9 +9,18 @@ jobs:
 
     steps:
       - name: Normal ENV
-        run: echo "E`
+        run: echo "ENV = $MESSAGE"
+    
+      - name: Create Variables
+        id: create
+        run: | 
+          echo "DYNAMIC=Hello ENV" >> "$GITHUB_ENV"
+          echo "result=Hello OUTPUT" >> "$GITHUB_OUTPUT"
 
-    steps:
-      - name: Read VAriables
+      - name: Read Variables
         env:
-          OUTPUT_VALUE
+          OUTPUT_VALUE: ${{ steps.create.outputs.result }}
+        run: |
+          echo "Normal ENV = $MESSAGE"
+          echo "GITHUB_ENV = $DYNAMIC"
+          echo "GITHUB_OUTPUT = $OUTPUT_VALUE"
